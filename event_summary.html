@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM SUMMARY</title>
+</head>
+
+<body>
+
+
+
+
+    <h1>Final DOM Event Handlers</h1>
+    <p id="changed">Default Input Text</p>
+    <input id="input-field" type="text">
+    <button id="update-btn">Update</button>
+    <br>
+    <br>
+    <h3 id="handlar_status">Alhamdulillah</h3>
+    <h4 id="rakib">rakibul islam shahin</h4>
+    <button onclick="handlarStatus()">hello javaScript</button>
+    <button id="handlar_listener">handlar event by addEvenListener</button>
+
+    <script>
+        function handlarStatus() {
+            const Handlers = document.getElementById('handlar_status');
+            Handlers.innerText = 'Alhamdulillah for everything Alhamdulillah';
+        }
+
+        document.getElementById('handlar_listener').addEventListener('click', function () {
+            const handele = document.getElementById('handlar_status');
+            handele.innerText = 'abcdefghijklmnopqrstuvwxyz';
+        })
+
+
+
+
+
+
+        document.getElementById('update-btn').addEventListener('click', function () {
+            const updateBtn = document.getElementById('input-field');
+            const changedText = updateBtn.value;
+            const p = document.getElementById('changed');
+            p.innerText = changedText;
+            updateBtn.value = '';
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

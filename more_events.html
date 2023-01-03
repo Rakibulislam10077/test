@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <button id="more_btn">Events</button>
+    <h3 id="name">Please enter your name</h3>
+    <input id="text_field" type="text">
+    <button>focused</button>
+
+
+
+    <script>
+        document.getElementById('text_field').addEventListener('focus', function () {
+            console.log('hello javaScript');
+        })
+        document.getElementById('text_field').addEventListener('blur', function () {
+            console.log('hello python')
+        })
+        document.getElementById('text_field').addEventListener('keydown', function (Event) {
+            console.log(Event.target.value);
+        })
+
+        document.getElementById('text_field').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        })
+        document.getElementById('more_btn').addEventListener('mousemove', function () {
+            console.log('Event triggered')
+        })
+    </script>
+</body>
+
+</html>

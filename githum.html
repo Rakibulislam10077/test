@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github html</title>
+</head>
+
+<body>
+    <h1 id="delete_text">hello python</h1>
+    <input id="delete_confirm" type="text" placeholder="please write delete text">
+    <button id="delete_btn" disabled>delete</button>
+    <script>
+        // document.getElementById('delete_confirm').addEventListener('keyup', function (event) {
+        //     const text = event.target.value;
+        //     const deleteBtn = document.getElementById('delete_btn');
+        //     if (text === 'delete') {
+        //         deleteBtn.removeAttribute('disabled');
+        //     }
+        //     else {
+        //         deleteBtn.setAttribute('disabled', true)
+        //     }
+        // })
+        // document.getElementById('delete_btn').addEventListener('click', function () {
+        //     const deleteText = document.getElementById('delete_text');
+        //     deleteText.style.display = 'none';
+        // })
+
+        document.getElementById('delete_confirm').addEventListener('keyup', function (event) {
+            const deleteText = document.getElementById('delete_text');
+            const text = event.target.value;
+            const deleteBtn = document.getElementById('delete_btn');
+            if (text === 'delete') {
+                deleteBtn.removeAttribute('disabled');
+            }
+            else {
+                deleteBtn.setAttribute('disabled');
+            }
+        })
+
+
+
+
+        document.getElementById('delete_btn').addEventListener('click', function () {
+            const deleteText = document.getElementById('delete_text');
+            deleteText.style.display = 'none';
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+<body>
+    <p id="ceo">CEO</p>
+    <input id="input_field" type="text">
+    <button id="update_btn">update</button>
+
+
+
+    <h3 id="handlar_status">Default Text</h3>
+    <button id="handlarListener">button</button>
+
+
+
+    <script>
+        document.getElementById('handlarListener').addEventListener('click', function () {
+            const listener = document.getElementById('handlar_status');
+            listener.innerText = 'hello javaSript';
+        })
+
+
+
+        document.getElementById('update_btn').addEventListener('click', function () {
+            const update = document.getElementById('input_field');
+            const value = update.value;
+            const p = document.getElementById('ceo');
+            p.innerText = value;
+            update.value = '';
+        })
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
